@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- DEĞİŞTİR: başlık (~50-60 karakter) ve açıklama (~120-155 karakter) -->
+  <title>Ad Soyad | Web Tasarımcı ve Front-End Geliştirici</title>
+  <meta name="description" content="Ad Soyad, küçük işletmeler ve girişimler için hızlı, mobil uyumlu ve akılda kalan web siteleri tasarlayan bir web tasarımcıdır.">
+
+  <!-- Open Graph / sosyal medya önizlemesi -->
+  <!-- DEĞİŞTİR: site adresi ve paylaşım görseli (1200x630) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ad Soyad | Web Tasarımcı">
+  <meta property="og:description" content="Küçük işletmeler ve girişimler için hızlı, mobil uyumlu web siteleri.">
+  <meta property="og:url" content="https://ornek-site.com/">
+  <meta property="og:image" content="https://ornek-site.com/paylasim-gorseli.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ad Soyad | Web Tasarımcı">
+  <meta name="twitter:description" content="Küçük işletmeler ve girişimler için hızlı, mobil uyumlu web siteleri.">
+  <meta name="theme-color" content="#14B8A6">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FF6B4A'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%231F2A44'%3EAS%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;800&display=swap&subset=latin-ext">
+
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe atla</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- DEĞİŞTİR: isim -->
+      <a class="logo" href="#top">Ad Soyad<span class="logo-dot">.</span></a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menüyü aç">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Ana menü">
+        <ul>
+          <li><a href="#hakkimda">Hakkımda</a></li>
+          <li><a href="#hizmetler">Hizmetler</a></li>
+          <li><a href="#referanslar">Referanslar</a></li>
+          <li><a href="#iletisim" class="nav-cta">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Giriş -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <span class="shape shape-circle" aria-hidden="true"></span>
+      <span class="shape shape-square" aria-hidden="true"></span>
+      <span class="shape shape-ring" aria-hidden="true"></span>
+
+      <div class="container hero-inner">
+        <!-- DEĞİŞTİR: meslek, isim ve tanıtım cümlesi -->
+        <p class="hero-eyebrow">Web Tasarımcı &amp; Front-End Geliştirici</p>
+        <h1 id="hero-title">Merhaba, ben <span class="highlight">Ad Soyad</span>.</h1>
+        <p class="hero-lead">
+          Küçük işletmeler ve girişimler için hızlı, mobil uyumlu ve akılda kalan web siteleri tasarlıyorum.
+          Fikrinizi, müşterilerinizin sevdiği bir siteye dönüştürelim.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#iletisim">İletişime Geç</a>
+          <a class="btn btn-secondary" href="#hizmetler">Hizmetlerimi Gör</a>
+        </div>
+
+        <!-- DEĞİŞTİR: sosyal medya adresleri -->
+        <ul class="hero-social" aria-label="Sosyal medya">
+          <li>
+            <a href="https://www.linkedin.com/in/kullanici-adi" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm7 0h3.8v1.5h.06c.53-1 1.83-1.8 3.64-1.8 3.9 0 4.5 2.4 4.5 5.6v5.7h-4v-5c0-1.2 0-2.8-1.75-2.8s-2.25 1.3-2.25 2.7v5.1h-4v-11Z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/kullanici-adi" aria-label="GitHub" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/kullanici-adi" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Hakkımda -->
+    <section class="section about" id="hakkimda" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="avatar reveal" aria-hidden="true">
+          <!-- DEĞİŞTİR: baş harfler -->
+          <span>AS</span>
+        </div>
+
+        <div class="about-text reveal">
+          <p class="section-eyebrow">Hakkımda</p>
+          <h2 id="about-title">Tasarımı sade, sonucu güçlü siteler</h2>
+          <!-- DEĞİŞTİR: kendini anlatan kısa metin -->
+          <p>
+            5 yılı aşkın süredir markaların dijital yüzünü tasarlıyorum. Her projeye işin amacını ve
+            hedef kitleyi anlayarak başlıyor, ardından kullanımı kolay ve hızlı açılan sayfalar hazırlıyorum.
+          </p>
+          <p>
+            İstanbul'da yaşıyorum; uzaktan Türkiye'nin her yerinden ve yurt dışından müşterilerle çalışıyorum.
+          </p>
+
+          <ul class="tags" aria-label="Yetenekler">
+            <li>HTML &amp; CSS</li>
+            <li>JavaScript</li>
+            <li>Figma</li>
+            <li>Duyarlı Tasarım</li>
+            <li>SEO</li>
+            <li>Erişilebilirlik</li>
+          </ul>
+
+          <!-- DEĞİŞTİR: sayılar -->
+          <dl class="stats">
+            <div class="stat stat-teal"><dt>Yıl deneyim</dt><dd>5+</dd></div>
+            <div class="stat stat-coral"><dt>Tamamlanan proje</dt><dd>40+</dd></div>
+            <div class="stat stat-yellow"><dt>Mutlu müşteri</dt><dd>20+</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hizmetler -->
+    <section class="section services" id="hizmetler" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Hizmetler</p>
+          <h2 id="services-title">Size nasıl yardımcı olabilirim?</h2>
+        </div>
+
+        <!-- DEĞİŞTİR: hizmet adları ve açıklamaları -->
+        <ul class="cards">
+          <li class="card card-teal reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg>
+            </span>
+            <h3>Web Tasarım</h3>
+            <p>Markanızı yansıtan, sade ve modern arayüzler. Ziyaretçiyi doğru adıma yönlendiren sayfa düzenleri.</p>
+          </li>
+          <li class="card card-coral reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            </span>
+            <h3>Mobil Uyumlu Geliştirme</h3>
+            <p>Telefon, tablet ve bilgisayarda kusursuz görünen, hızlı açılan siteler.</p>
+          </li>
+          <li class="card card-yellow reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            </span>
+            <h3>SEO</h3>
+            <p>Arama motorlarında daha görünür olmanız için teknik ve içerik iyileştirmeleri.</p>
+          </li>
+          <li class="card card-ink reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+            </span>
+            <h3>Danışmanlık</h3>
+            <p>Mevcut sitenizi inceleyip neyin daha iyi olabileceğine dair net bir yol haritası.</p>
+          </li>
+        </ul>
+
+        <div class="process reveal">
+          <h3 class="process-title">Nasıl çalışıyorum?</h3>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-num">1</span>
+              <div>
+                <h4>Tanışma</h4>
+                <p>Hedeflerinizi ve ihtiyaçlarınızı kısa bir görüşmede konuşuyoruz.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num">2</span>
+              <div>
+                <h4>Tasarım &amp; Geliştirme</h4>
+                <p>Önce taslak, onayınızdan sonra çalışan site. Her aşamada sizi bilgilendiriyorum.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num">3</span>
+              <div>
+                <h4>Teslim &amp; Destek</h4>
+                <p>Siteyi yayına alıyor, teslim sonrası da yanınızda oluyorum.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Referanslar -->
+    <section class="section testimonials" id="referanslar" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Referanslar</p>
+          <h2 id="testimonials-title">Birlikte çalıştıklarım ne diyor?</h2>
+        </div>
+
+        <!-- DEĞİŞTİR: gerçek müşteri yorumları -->
+        <ul class="quotes">
+          <li class="quote reveal">
+            <blockquote>
+              <p>“Sitemiz yayına girdikten sonra gelen talepler ikiye katlandı. Süreç boyunca her şey çok netti.”</p>
+            </blockquote>
+            <p class="quote-author"><strong>Müşteri Adı</strong><span>Kurucu, Örnek Kafe</span></p>
+          </li>
+          <li class="quote reveal">
+            <blockquote>
+              <p>“Ne istediğimizi bizden önce anladı. Hızlı, özenli ve iletişimi çok kolay.”</p>
+            </blockquote>
+            <p class="quote-author"><strong>Müşteri Adı</strong><span>Pazarlama Müdürü, Örnek Şirket</span></p>
+          </li>
+          <li class="quote reveal">
+            <blockquote>
+              <p>“Eski sitemizi baştan sona yeniledi; artık telefonda da harika görünüyor.”</p>
+            </blockquote>
+            <p class="quote-author"><strong>Müşteri Adı</strong><span>Sahibi, Örnek Butik</span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- İletişim -->
+    <section class="section contact" id="iletisim" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">İletişim</p>
+          <h2 id="contact-title">Bir projeniz mi var? Konuşalım.</h2>
+          <p class="section-lead">Genellikle 24 saat içinde dönüş yapıyorum.</p>
+        </div>
+
+        <!-- DEĞİŞTİR: iletişim bilgileri -->
+        <ul class="contact-list">
+          <li class="reveal">
+            <a class="contact-item" href="mailto:merhaba@ornek-site.com">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </span>
+              <span><span class="contact-label">E-posta</span><span class="contact-value">merhaba@ornek-site.com</span></span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="contact-item" href="tel:+905551234567">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+              </span>
+              <span><span class="contact-label">Telefon</span><span class="contact-value">+90 555 123 45 67</span></span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="contact-item" href="https://www.linkedin.com/in/kullanici-adi" target="_blank" rel="noopener">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm7 0h3.8v1.5h.06c.53-1 1.83-1.8 3.64-1.8 3.9 0 4.5 2.4 4.5 5.6v5.7h-4v-5c0-1.2 0-2.8-1.75-2.8s-2.25 1.3-2.25 2.7v5.1h-4v-11Z"/></svg>
+              </span>
+              <span><span class="contact-label">LinkedIn</span><span class="contact-value">/in/kullanici-adi</span></span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="contact-item" href="https://github.com/kullanici-adi" target="_blank" rel="noopener">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+              </span>
+              <span><span class="contact-label">GitHub</span><span class="contact-value">@kullanici-adi</span></span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="contact-item" href="https://www.instagram.com/kullanici-adi" target="_blank" rel="noopener">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </span>
+              <span><span class="contact-label">Instagram</span><span class="contact-value">@kullanici-adi</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <!-- DEĞİŞTİR: isim -->
+      <p>&copy; <span id="year">2026</span> Ad Soyad. Tüm hakları saklıdır.</p>
+      <a href="#top" class="back-to-top">Başa dön</a>
+    </div>
+  </footer>
+</body>
+</html>
