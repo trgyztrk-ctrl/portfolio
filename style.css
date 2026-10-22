@@ -12,8 +12,9 @@
   --ink: #1F2A44;
   --ink-soft: #4A5568;
 
-  --font-heading: "Poppins", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: "Unbounded", system-ui, sans-serif;
+  --font-accent: "Caveat", "Comic Sans MS", cursive;
+  --font-body: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --radius: 20px;
   --radius-sm: 12px;
@@ -264,6 +265,8 @@ svg {
 }
 
 .highlight {
+  font-family: var(--font-accent);
+  font-size: 1.15em;
   background: var(--cream);
   padding: 0 0.15em;
   border-radius: 8px;
