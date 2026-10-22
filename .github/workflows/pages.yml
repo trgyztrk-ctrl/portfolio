@@ -1,0 +1,55 @@
+# main'e her gönderimde siteyi GitHub Pages'e yayınlar.
+# Yayın sırasında alt bilgideki sürüm (v1.0.<commit sayısı>) ve son güncelleme tarihi sayfaya yazılır.
+name: Siteyi yayınla
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # commit sayısı için tüm geçmiş gerekli
+
+      - name: Sürüm ve tarihi sayfaya yaz
+        run: |
+          VERSION="v1.0.$(git rev-list --count HEAD)"
+          COMMIT_URL="${{ github.server_url }}/${{ github.repository }}/commit/$(git rev-parse HEAD)"
+          UPDATED_ISO="$(git log -1 --format=%cI)"
+          UPDATED_TEXT="$(TZ=Europe/Istanbul date -d "$UPDATED_ISO" '+%d.%m.%Y %H:%M')"
+
+          mkdir _site
+          rsync -a --exclude='.git*' --exclude='_site' ./ _site/
+
+          sed -i \
+            -e "s|<a id=\"site-version\" href=\"[^\"]*\">[^<]*</a>|<a id=\"site-version\" href=\"$COMMIT_URL\">$VERSION</a>|" \
+            -e "s|<time id=\"site-updated\" datetime=\"[^\"]*\">[^<]*</time>|<time id=\"site-updated\" datetime=\"$UPDATED_ISO\">$UPDATED_TEXT</time>|" \
+            _site/index.html
+
+          grep -q "$VERSION" _site/index.html
+          echo "Yayınlanan sürüm: $VERSION ($UPDATED_TEXT)"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

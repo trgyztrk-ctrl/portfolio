@@ -57,4 +57,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Alt bilgideki yıl
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Son güncelleme tarihini Türkçe biçimde göster
+  const updated = document.getElementById("site-updated");
+  const updatedIso = updated.getAttribute("datetime");
+  if (updatedIso) {
+    updated.textContent = new Intl.DateTimeFormat("tr-TR", {
+      dateStyle: "long",
+      timeStyle: "short",
+      timeZone: "Europe/Istanbul",
+    }).format(new Date(updatedIso));
+  }
 });
