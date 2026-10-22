@@ -1,10 +1,12 @@
-# main'e her gönderimde siteyi GitHub Pages'e yayınlar.
+# main'e her gönderimde önce testleri çalıştırır; testler geçerse siteyi GitHub Pages'e yayınlar.
+# Pull request'lerde yalnızca testler çalışır, yayın yapılmaz.
 # Yayın sırasında alt bilgideki sürüm (v1.0.<commit sayısı>) ve son güncelleme tarihi sayfaya yazılır.
 name: Siteyi yayınla
 
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -13,11 +15,25 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Site testlerini çalıştır
+        run: node --test tests/site.test.mjs
+
   deploy:
+    needs: test # testler geçmezse yayın yapılmaz
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -35,7 +51,7 @@ jobs:
           UPDATED_TEXT="$(TZ=Europe/Istanbul date -d "$UPDATED_ISO" '+%d.%m.%Y %H:%M')"
 
           mkdir _site
-          rsync -a --exclude='.git*' --exclude='_site' ./ _site/
+          rsync -a --exclude='.git*' --exclude='_site' --exclude='tests' ./ _site/
 
           sed -i \
             -e "s|<a id=\"site-version\" href=\"[^\"]*\">[^<]*</a>|<a id=\"site-version\" href=\"$COMMIT_URL\">$VERSION</a>|" \
